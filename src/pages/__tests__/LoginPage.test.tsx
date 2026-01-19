@@ -118,7 +118,7 @@ describe('LoginPage', () => {
         // Only numbers
         await userEvent.type(passwordInput, '12345678');
         await userEvent.click(loginButton);
-        expect(screen.getByText('密碼必須包含英文字母.    djpkj,[lm[和數字')).toBeInTheDocument();
+        expect(screen.getByText('密碼必須包含英文字母和數字')).toBeInTheDocument();
 
         // Only letters
         await userEvent.clear(passwordInput);
